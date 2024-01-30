@@ -1,0 +1,15 @@
+h1, h2 {
+    font-weight: bold;
+}
+
+label {
+    font-size: 22px;
+}
+
+textarea {
+    vertical-align: top;
+}
+
+#submit {
+    font-size: 18px;
+}
