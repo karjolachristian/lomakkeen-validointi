@@ -10,49 +10,62 @@
     <h1>Rekisteröitymislomake</h1>
     <h2>Siirry kentästä toiseen tab-näppäimellä</h2>
 
-    <div id="lomake">
-        <label for="id">Käyttäjä ID: </label>
-        <input type="text">
-        <br>
-        <label for="salasana">Salasana: </label>
-        <input type="text">
-        <br>
-        <label for="nimi">Nimi: </label>
-        <input type="text">
-        <br>
-        <label for="osoite">Osoite: </label>
-        <input type="text">
-        <br>
-        <label for="maa">Maa: </label>
-        <select name="maa" id="maa">
-            <option value="valitse">(Valitse maa)</option>
-        </select>
-        <br>
-        <label for="postinumero">Postinumero: </label>
-        <input id="numero" type="text">
-        <span id="postinumeroError" class="error"></span>
-        <br>
-        <label for="email">Sähköposti: </label>
-        <input id="sahkoposti" type="text">
-        <span id="emailError" class="error"></span>
-        <br>
-        <label for="sukupuoli">Sukupuoli: </label>
-        <input type="radio">
-        <label for="mies">Mies</label>
-        <input type="radio">
-        <label for="nainen">Nainen</label>
-        <br>
-        <label for="kieli">Kieli: </label>
-        <input type="checkbox">
-        <label for="suomi">Suomi</label>
-        <input type="checkbox">
-        <label for="muu">Muu kuin suomi</label>
-        <br>
-        <label for="lisatietoja">Lisätietoja: </label><textarea rows="5" id="lisatietoja" name="lisatietoja"></textarea>
-        <br>
-        <br>
-        <input type="button" onclick="validointi()" value="Tarkista" id="submit">
-    </div>
+    <form id="lomake">
+        <div>
+            <label for="userId">Käyttäjä ID:</label>
+            <input type="text" id="kayttajaId" name="kayttajaId">
+        </div>
+        <div>
+            <label for="password">Salasana:</label>
+            <input type="password" id="salasana" name="salasana">
+        </div>
+        <div>
+            <label for="nimi">Nimi:</label>
+            <input type="text" id="nimi" name="nimi">
+        </div>
+        <div>
+            <label for="osoite">Osoite:</label>
+            <input type="text" id="osoite" name="osoite">
+        </div>
+        <div>
+            <label for="maa">Maa:</label>
+            <select id="maa" name="maa">
+                <option value="">Valitse maa</option>
+                <option value="suomi">Suomi</option>
+                <option value="ruotsi">Ruotsi</option>
+                <option value="norja">Norja</option>
+            </select>
+        </div>
+        <div>
+            <label for="postinumero">Postinumero:</label>
+            <input type="text" id="postinumero" name="postinumero">
+        </div>
+        <div>
+            <label for="email">Sähköposti:</label>
+            <input type="text" id="email" name="email">
+        </div>
+        <div>
+            <label>Sukupuoli:</label>
+            <input type="radio" id="mies" name="sukupuoli" value="mies">
+            <label for="mies">Mies</label>
+            <input type="radio" id="nainen" name="sukupuoli" value="nainen">
+            <label for="nainen">Nainen</label>
+        </div>
+        <div>
+            <label>Kieli:</label>
+            <input type="radio" id="suomi" name="kieli" value="suomi">
+            <label for="suomi">Suomi</label>
+            <input type="radio" id="muu" name="kieli" value="muu">
+            <label for="muu">Muu kuin suomi</label>
+        </div>
+        <div>
+            <label for="lisatietoja">Lisätietoja:</label>
+            <textarea id="lisatietoja" name="lisatietoja"></textarea>
+        </div>
+        <div>
+            <button type="submit">Lähetä</button>
+        </div>
+    </form>
 
     <script src="main.js"></script>
 </body>
